@@ -1,0 +1,39 @@
+<div>
+  <div class="header d-flex flex-column ">
+    <h1 class="text-center mt-4 fw-bold">PORTFOLIO COMPONENT</h1>
+    <div class="star d-flex justify-content-center align-items-center">
+      <div class="line"></div>
+      <i class="fa-solid fa-star  text-white mx-2"></i>
+      <div class="line"></div>
+    </div>
+  </div>
+
+  <div class="container my-5 position-relative">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6 gx-5 gy-4" *ngFor="let SrcImage of urlImages; let i = index">
+        <div class="portfolio-item">
+          <figure>
+            <img [src]="SrcImage" class="w-100 rounded">
+          </figure>
+          <div (click)="showModal(SrcImage, i)" class="portfolio-item-layer rounded" data-bs-toggle="modal"
+            data-bs-target="#ImgModal">
+            <i class="fab fa-plus text-white"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="ImgModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <i (click)="prevModal()" class=" fa-solid fa-arrow-left text-white btn fs-5 rounded-pill"></i>
+          <figure>
+            <img [src]="SrcImage" class="w-100 rounded" [alt]="imgIndexAlt">
+          </figure>
+          <i (click)="nextModal()" class="fa-solid fa-arrow-right text-white btn fs-5 rounded-pill"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

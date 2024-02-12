@@ -1,0 +1,21 @@
+nav{
+  background-color: #2C3E50 !important;
+  /* padding: 15px; */
+}
+li a{
+color: white !important;
+font-size: 20px;
+font-weight: bold;
+}
+li{
+margin-left: 5px;
+}
+.navbar-brand{
+font-size: 33px;
+font-weight: bold;
+}
+
+.activeStyle{
+background-color: #1abc9c;
+border-radius: 5px;
+}

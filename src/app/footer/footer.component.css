@@ -1,0 +1,18 @@
+.container-fluid{
+  background-color: #2C3E50;
+  color: white;
+
+}
+.footer-bootom{
+  background-color: #1A252F;
+  color: white;
+  padding: 10px;
+}
+
+.icons i{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+  padding-top: 10px;
+}
